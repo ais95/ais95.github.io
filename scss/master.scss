@@ -94,6 +94,7 @@ body{
 		padding-top: 260px;
 		.block__item{
 			height: 140px;
+			margin-bottom: 24px;
 			overflow: hidden;
 			border-radius: 7px;
 			padding: 24px;
@@ -315,4 +316,17 @@ footer{
 			margin-top: 6vh;
 		}
 	}
+	.about__information{
+		padding-top: 10vh;
+			.site__highlight{
+				margin-top: 48px;
+				.highlighted__text{
+					top: auto;
+					bottom: -54px;
+					width: 75%;
+				}
+			}
+	}
 }
+// For run with scss
+// sass --watch scss/master.scss:css/style.css --style compressed;
