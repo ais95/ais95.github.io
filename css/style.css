@@ -6,6 +6,7 @@ body {
 .header__hd {
   min-height: 100vh;
   position: relative;
+  overflow: hidden;
 }
 .header__hd::after {
   content: "";
@@ -68,8 +69,8 @@ body {
 
 /*Common style */
 section {
-  min-height: 100vh;
-  padding: 15% 0;
+  overflow: hidden;
+  padding: 10vh 0;
 }
 section .title__grey {
   color: #e1e1e1;
@@ -87,6 +88,9 @@ section .section__text {
 }
 
 /*about__information*/
+.about__information {
+  padding-top: 260px;
+}
 .about__information .service__block {
   margin: 0;
   padding: 0;
@@ -121,20 +125,136 @@ section .section__text {
   width: 280px;
 }
 
+.portfolio__area .project__gallery {
+  position: relative;
+  margin: 18px auto;
+}
+.portfolio__area .project__gallery .gallery__img {
+  width: 100%;
+  height: 390px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+.portfolio__area .project__gallery .ext__link {
+  display: block;
+  position: absolute;
+  background-color: #ffffff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  width: 70%;
+  height: auto;
+  overflow: hidden;
+  padding: 17px;
+  border-radius: 9px;
+  left: 0;
+  bottom: -96px;
+  margin-left: 15%;
+  z-index: -9;
+  opacity: 0;
+  transition: ease-out 0.3s;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+.portfolio__area .project__gallery .ext__link .ext__name {
+  float: left;
+  font-size: 17px;
+  font-weight: medium;
+  width: 90%;
+  color: #0180FF;
+}
+.portfolio__area .project__gallery .ext__link .ext__icon {
+  float: right;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  margin-top: -10px;
+}
+.portfolio__area .project__gallery .ext__link .ext__icon path {
+  fill: #0180FF;
+}
+.portfolio__area .project__gallery:hover .ext__link {
+  bottom: -12px;
+  z-index: 9;
+  opacity: 1;
+  background-color: #ffffff;
+}
+.portfolio__area .project__gallery:hover .ext__link:hover {
+  background-color: #0180FF;
+}
+.portfolio__area .project__gallery:hover .ext__link:hover .ext__name {
+  color: #ffffff;
+}
+.portfolio__area .project__gallery:hover .ext__link:hover .ext__icon path {
+  fill: #ffffff;
+}
+
+.works__process .process_block .icon__set {
+  position: relative;
+  display: block;
+  margin-bottom: 0;
+}
+.works__process .process_block .icon__set .icon {
+  position: absolute;
+  left: -12px;
+  height: 28px;
+  top: 36px;
+}
+.works__process .process_block .icon__set .steps {
+  display: block;
+  font-size: 72px;
+  font-weight: bold;
+  color: #f0f0f0;
+}
+
+footer {
+  margin-bottom: 5vh;
+}
+footer .site__footer {
+  position: relative;
+  padding: 72px;
+}
+footer .site__footer .social__icon li a img {
+  height: 36px;
+  margin: 6px;
+}
+footer .site__footer .site__text a {
+  font-weight: bold;
+  text-decoration: underline;
+}
+footer .site__footer::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #FFE713;
+  border-radius: 120px;
+  z-index: -1;
+  transform: rotate(-3deg);
+}
+
 /* Responsive styles */
 @media only screen and (max-width: 990px) {
   .header__hd::after {
     margin-top: -30%;
     margin-left: -30%;
     max-width: 120%;
-    height: 70vh;
+    height: 65vh;
     border-radius: 48px;
+    transform: rotate(-9deg);
+  }
+  .header__hd .content_hd {
+    text-align: center;
   }
   .header__hd .profile__hd {
     border-radius: 50%;
     width: 220px;
     margin: 0 auto;
-    margin-top: 15%;
+    margin-top: 6vh;
   }
 }
 
