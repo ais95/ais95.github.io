@@ -20,6 +20,7 @@ body {
   margin-top: -30%;
   margin-left: -30%;
   margin-bottom: 2.3%;
+  min-height: 95vh;
   border-radius: 48px;
   background-color: #0180FF;
   background: linear-gradient(to left, #7e05ff 0%, #0073ff 100%);
@@ -91,13 +92,7 @@ section .section__text {
 .about__information {
   padding-top: 260px;
 }
-.about__information .service__block {
-  margin: 0;
-  padding: 0;
-  display: flex;
-}
-.about__information .service__block .block__item {
-  margin-right: 24px;
+.about__information .block__item {
   height: 140px;
   overflow: hidden;
   border-radius: 7px;
@@ -105,10 +100,10 @@ section .section__text {
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
-.about__information .service__block .block__item .block__img {
+.about__information .block__item .block__img {
   height: 58px;
 }
-.about__information .service__block .block__item span {
+.about__information .block__item span {
   padding-top: 12px;
   font-size: 15px;
 }
@@ -120,7 +115,7 @@ section .section__text {
   padding: 24px;
   border-radius: 24px;
   position: absolute;
-  left: 50%;
+  right: 0;
   top: -50%;
   width: 280px;
 }
@@ -136,7 +131,8 @@ section .section__text {
   object-position: center;
   display: block;
   border-radius: 12px;
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  border: 2px solid rgba(0, 0, 0, 0.05);
+  transition: ease 0.1s;
 }
 .portfolio__area .project__gallery .ext__link {
   display: block;
@@ -144,17 +140,17 @@ section .section__text {
   background-color: #ffffff;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
   overflow: hidden;
-  width: 70%;
+  width: 80%;
   height: auto;
   overflow: hidden;
   padding: 17px;
-  border-radius: 9px;
+  border-radius: 7px;
   left: 0;
-  bottom: -96px;
-  margin-left: 15%;
+  bottom: -48px;
+  margin-left: 10%;
   z-index: -9;
   opacity: 0;
-  transition: ease-out 0.3s;
+  transition: ease-out 0.15s;
   cursor: pointer;
   box-sizing: border-box;
 }
@@ -171,9 +167,14 @@ section .section__text {
   right: 15px;
   top: 50%;
   margin-top: -10px;
+  height: 20px;
 }
 .portfolio__area .project__gallery .ext__link .ext__icon path {
   fill: #0180FF;
+}
+.portfolio__area .project__gallery:hover .gallery__img {
+  filter: grayscale(100%);
+  opacity: 0.5;
 }
 .portfolio__area .project__gallery:hover .ext__link {
   bottom: -12px;
@@ -191,6 +192,9 @@ section .section__text {
   fill: #ffffff;
 }
 
+.works__process .process_block .subtitle__text {
+  color: #007bff;
+}
 .works__process .process_block .icon__set {
   position: relative;
   display: block;
@@ -198,15 +202,17 @@ section .section__text {
 }
 .works__process .process_block .icon__set .icon {
   position: absolute;
-  left: -12px;
-  height: 28px;
+  left: 0px;
+  width: 32px;
   top: 36px;
+  fill: #000000;
 }
 .works__process .process_block .icon__set .steps {
   display: block;
   font-size: 72px;
   font-weight: bold;
-  color: #f0f0f0;
+  color: #f9f9f9;
+  padding-left: 15px;
 }
 
 footer {
@@ -232,23 +238,44 @@ footer .site__footer::after {
   left: 0;
   right: 0;
   background-color: #FFE713;
-  border-radius: 120px;
+  border-radius: 160px;
   z-index: -1;
   transform: rotate(-3deg);
 }
 
 /* Responsive styles */
 @media only screen and (max-width: 990px) {
+  .about__information {
+    padding-top: 10vh;
+  }
+  .about__information .site__highlight {
+    margin-top: 48px;
+  }
+  .about__information .site__highlight .highlighted__text {
+    top: auto;
+    bottom: -48px;
+    width: 60%;
+  }
+
+  footer {
+    margin-bottom: 5vh;
+  }
+  footer .site__footer {
+    padding: 32px;
+  }
+}
+@media only screen and (max-width: 768px) {
   .header__hd::after {
     margin-top: -30%;
     margin-left: -30%;
     max-width: 120%;
     height: 65vh;
+    min-height: 0;
     border-radius: 48px;
     transform: rotate(-9deg);
   }
   .header__hd .content_hd {
-    text-align: center;
+    text-align: center !important;
   }
   .header__hd .profile__hd {
     border-radius: 50%;
