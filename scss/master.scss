@@ -427,6 +427,19 @@ footer{
 }
 
 @media only screen and (max-width: 640px){
+	.header__hd{
+		.profile__hd{
+			border-radius: 50%;
+			width: 170px;
+			margin: 0 auto;
+			margin-top: 4vh;
+			transform: translateY(36px);
+			filter: grayscale(100%);
+			border-radius: 24px;
+			animation: movepicture 0.7s ease 0.7s forwards;
+
+		}
+	}
 	.portfolio__area{
 		.carousel{
 			.carousel-item{
