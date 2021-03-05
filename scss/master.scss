@@ -146,7 +146,7 @@ body{
 	}
 
 
-// Portfolio section	
+// Portfolio section
 .portfolio__area{
 	.carousel{
 		.carousel-item{
@@ -156,10 +156,11 @@ body{
 				max-width: 640px;
 				height: 480px;
 				object-fit: cover;
-				object-position: center;
+				object-position: top;
 				opacity: 0.5;
 				transition: ease 0.3s;
 				border-radius: 24px;
+				border: 1px solid rgba(0,0,0,0.05);
 			}
 			.project__desc{
 				position: absolute;
@@ -176,18 +177,21 @@ body{
 				border-radius: 18px;
 				.project__title{
 					font-weight: bold;
+					color: #ffffff;
 				}
 				.project__details{
 					margin-bottom: 3px;
 					font-size: 13px;
+					color: #ffffff;
 				}
 				ul li{
 					font-size: 13px;
 					padding-right: 7px;
 					font-weight: bold;
+					color: #ffffff;
 				}
 				.ext__link{
-					color: #000000;
+					color: #f0f0f0;
 					text-decoration: underline;
 					font-size: 15px;
 				}
