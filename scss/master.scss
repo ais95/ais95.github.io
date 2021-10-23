@@ -1,4 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap');
+body::-webkit-scrollbar {
+    width: 4px;
+}
+ 
+body::-webkit-scrollbar-track {
+	background: rgb(72,0,255);
+	background: linear-gradient(0deg, rgba(72,0,255,1) 0%, rgba(255,0,164,1) 100%);
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: #FFE713;
+}
 body{
 	font-family: 'Quicksand', sans-serif;
 }
