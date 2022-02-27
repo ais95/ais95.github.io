@@ -143,6 +143,7 @@ body #wrapper .header .header-content .heading_text {
   font-family: inherit;
   font-weight: lighter;
   color: white;
+  text-transform: uppercase;
 }
 body #wrapper .header .header-content .heading_text span {
   color: #FFFF00;
