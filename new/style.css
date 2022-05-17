@@ -220,7 +220,6 @@ body #wrapper .projects .projects_collage::after {
   z-index: 9;
 }
 body #wrapper .projects .projects_collage .item {
-  background-color: red;
   box-sizing: border-box;
   overflow: hidden;
 }
@@ -230,6 +229,7 @@ body #wrapper .projects .projects_collage .item img {
   object-position: center;
 }
 body #wrapper .projects .projects_collage .item a {
+  max-width: 100%;
   display: block;
   position: relative;
 }
