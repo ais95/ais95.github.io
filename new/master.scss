@@ -341,6 +341,7 @@ body{
         // working experiences
         .work_experiences{
             position: relative;
+            padding-bottom: 10%;
             .project_title{
                 font-size: 120px;
                 font-family: $font-primary;
@@ -352,7 +353,7 @@ body{
                 padding: 12px;
                 margin: 0 auto;
                 position: static;
-                margin-top: -120px;
+                margin-top: -60px;
                 padding: 24px;
                 .item{
                     color: $white-background;

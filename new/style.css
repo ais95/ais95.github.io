@@ -304,6 +304,7 @@ body #wrapper .projects .projects_collage .abstractions {
 }
 body #wrapper .work_experiences {
   position: relative;
+  padding-bottom: 10%;
 }
 body #wrapper .work_experiences .project_title {
   font-size: 120px;
@@ -316,7 +317,7 @@ body #wrapper .work_experiences .experience_card {
   padding: 12px;
   margin: 0 auto;
   position: static;
-  margin-top: -120px;
+  margin-top: -60px;
   padding: 24px;
 }
 body #wrapper .work_experiences .experience_card .item {
