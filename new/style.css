@@ -2,8 +2,7 @@
 /* width */
 ::-webkit-scrollbar {
   width: 4px;
-  background-color: rgba(0, 102, 114, 0.5);
-  border-left: 1px solid #FFFF00;
+  background-color: #FFFF00;
 }
 
 ::-webkit-scrollbar-track {
@@ -12,6 +11,10 @@
 
 ::-webkit-scrollbar-thumb {
   background: #AB00FF;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -101,7 +104,7 @@ body #wrapper nav.main_nav .nav_items li {
   margin: 0 12px;
 }
 body #wrapper nav.main_nav .nav_items li a {
-  color: white;
+  color: rgb(255, 255, 255);
   position: relative;
   text-decoration: none;
   padding: 3px 6px;
@@ -142,7 +145,7 @@ body #wrapper .header .header-content .heading_text {
   font-size: 72px;
   font-family: inherit;
   font-weight: lighter;
-  color: white;
+  color: rgb(255, 255, 255);
   text-transform: uppercase;
 }
 body #wrapper .header .header-content .heading_text span {
@@ -154,7 +157,7 @@ body #wrapper .header .header-content .subheading_text {
   font-family: "Josefin Sans", sans-serif;
   font-size: 28px;
   font-weight: 200;
-  color: white;
+  color: rgb(255, 255, 255);
   line-height: 36px;
 }
 body #wrapper .about {
@@ -177,7 +180,7 @@ body #wrapper .about .container .about_heading {
 body #wrapper .about .about_me_typo {
   font-family: inherit;
   font-size: 42px;
-  color: white;
+  color: rgb(255, 255, 255);
   line-height: 64px;
   font-weight: lighter;
   text-align: center;
@@ -266,8 +269,8 @@ body #wrapper .projects .projects_collage .external_button {
   display: block;
   color: #AB00FF;
   font-family: "Josefin Sans", sans-serif;
-  border: 1px solid white;
-  background-color: white;
+  border: 1px solid rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255);
   z-index: 9;
   font-size: 16px;
   text-align: center;
@@ -283,7 +286,7 @@ body #wrapper .projects .projects_collage .external_button::after {
   right: 0px;
   top: 0px;
   bottom: 0px;
-  border: 1px solid white;
+  border: 1px solid rgb(255, 255, 255);
   border-radius: 4px;
   transition: ease 0.3s;
   opacity: 0;
@@ -321,7 +324,7 @@ body #wrapper .work_experiences .experience_card {
   padding: 24px;
 }
 body #wrapper .work_experiences .experience_card .item {
-  color: white;
+  color: rgb(255, 255, 255);
   border-bottom: 1px dashed #fff;
   margin: 14px;
 }
