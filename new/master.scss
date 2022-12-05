@@ -369,13 +369,20 @@ body{
                         font-family: $font-primary;
                         font-size: 28px;
                         font-weight: lighter;
-                        margin: 16px 0;
+                        margin: 6px 0;
+                    }
+                    .duration{
+                        margin-top: 24px;
                     }
                     h3{
                         font-family: inherit;
                         font-size: 48px;
                         font-weight: normal;
-                        margin: 16px 0;
+                        margin: 0;
+                    }
+                    .label{
+                        padding: 24px 0;
+                        margin-bottom: 24px;
                     }
                 }
             }

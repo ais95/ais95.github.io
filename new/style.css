@@ -335,13 +335,20 @@ body #wrapper .work_experiences .experience_card .item p {
   font-family: "Josefin Sans", sans-serif;
   font-size: 28px;
   font-weight: lighter;
-  margin: 16px 0;
+  margin: 6px 0;
+}
+body #wrapper .work_experiences .experience_card .item .duration {
+  margin-top: 24px;
 }
 body #wrapper .work_experiences .experience_card .item h3 {
   font-family: inherit;
   font-size: 48px;
   font-weight: normal;
-  margin: 16px 0;
+  margin: 0;
+}
+body #wrapper .work_experiences .experience_card .item .label {
+  padding: 24px 0;
+  margin-bottom: 24px;
 }
 body #wrapper .main_footer {
   border-top: 1px solid rgba(255, 255, 255, 0.25);
