@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;600&display=swap");
 /* width */
 ::-webkit-scrollbar {
-  width: 4px;
-  background-color: #FFFF00;
+  width: 2px;
+  background-color: #006672;
 }
 
 ::-webkit-scrollbar-track {
@@ -10,7 +10,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #AB00FF;
+  background: #FFFF00;
 }
 
 html {
@@ -18,11 +18,12 @@ html {
 }
 
 body {
+  font-family: serif;
   padding: 0;
   margin: 0;
 }
 body #wrapper {
-  background-color: rgba(0, 102, 114, 0.5);
+  background-color: #006672;
   min-height: 100vh;
   position: relative;
   z-index: 1;
@@ -53,6 +54,9 @@ body #wrapper .container .row_100 .col-20 {
 body #wrapper .container .row_100 .col-30 {
   max-width: 30%;
 }
+body #wrapper .container .row_100 .col-33 {
+  max-width: 33.333%;
+}
 body #wrapper .container .row_100 .col-40 {
   max-width: 40%;
 }
@@ -74,7 +78,7 @@ body #wrapper .container .row_100 .col-90 {
 body #wrapper .container .row_100 .col-100 {
   max-width: 100%;
 }
-body #wrapper .container .row_100 .col-10, body #wrapper .container .row_100 .col-20, body #wrapper .container .row_100 .col-30, body #wrapper .container .row_100 .col-40, body #wrapper .container .row_100 .col-50, body #wrapper .container .row_100 .col-60, body #wrapper .container .row_100 .col-70, body #wrapper .container .row_100 .col-80, body #wrapper .container .row_100 .col-90, body #wrapper .container .row_100 .col-100 {
+body #wrapper .container .row_100 .col-10, body #wrapper .container .row_100 .col-20, body #wrapper .container .row_100 .col-30, body #wrapper .container .row_100 .col-33, body #wrapper .container .row_100 .col-40, body #wrapper .container .row_100 .col-50, body #wrapper .container .row_100 .col-60, body #wrapper .container .row_100 .col-70, body #wrapper .container .row_100 .col-80, body #wrapper .container .row_100 .col-90, body #wrapper .container .row_100 .col-100 {
   padding: 0;
   box-sizing: border-box;
   overflow: hidden;
@@ -84,14 +88,15 @@ body #wrapper section {
   height: auto;
   min-height: 100vh;
 }
-body #wrapper nav.main_nav {
+body #wrapper .main_nav {
   width: 100%;
   padding: 12px 0;
+  border-bottom: 1px dotted rgba(255, 255, 0, 0.3);
 }
-body #wrapper nav.main_nav .logo {
+body #wrapper .main_nav .logo {
   overflow: hidden;
 }
-body #wrapper nav.main_nav .nav_items {
+body #wrapper .main_nav .nav_items {
   padding: 0;
   margin: 0;
   height: 100%;
@@ -99,36 +104,22 @@ body #wrapper nav.main_nav .nav_items {
   align-items: center;
   justify-content: center;
 }
-body #wrapper nav.main_nav .nav_items li {
+body #wrapper .main_nav .nav_items li {
   display: inline-block;
   margin: 0 12px;
+  padding: 16px;
 }
-body #wrapper nav.main_nav .nav_items li a {
+body #wrapper .main_nav .nav_items li a {
   color: rgb(255, 255, 255);
   position: relative;
   text-decoration: none;
-  padding: 3px 6px;
-  font-size: 16px;
-  font-weight: 300;
-  font-family: "Josefin Sans", sans-serif;
+  padding: 6px;
+  font-size: 22px;
+  font-weight: lighter;
+  font-family: serif;
 }
-body #wrapper nav.main_nav .nav_items li a::after {
-  position: absolute;
-  content: "";
-  left: 0;
-  bottom: -3px;
-  height: 1px;
-  width: 0;
-  border-radius: 8px;
-  background-image: linear-gradient(to right, #FFFF00, #00FF22);
-  transition: ease 0.3s;
-  opacity: 0.5;
-}
-body #wrapper nav.main_nav .nav_items li a:hover {
-  color: #00FF22;
-}
-body #wrapper nav.main_nav .nav_items li a:hover::after {
-  width: 100%;
+body #wrapper .main_nav .nav_items li a:hover {
+  color: #FFFF00;
 }
 body #wrapper .header {
   position: relative;
@@ -146,19 +137,80 @@ body #wrapper .header .header-content .heading_text {
   font-family: inherit;
   font-weight: lighter;
   color: rgb(255, 255, 255);
-  text-transform: uppercase;
 }
-body #wrapper .header .header-content .heading_text span {
+body #wrapper .header .header-content .heading_text .hl_text {
   color: #FFFF00;
   text-decoration: underline;
-  display: block;
 }
 body #wrapper .header .header-content .subheading_text {
-  font-family: "Josefin Sans", sans-serif;
   font-size: 28px;
-  font-weight: 200;
+  font-weight: lighter;
+  font-family: "Josefin Sans", sans-serif;
   color: rgb(255, 255, 255);
   line-height: 36px;
+  padding-right: 10%;
+}
+body #wrapper .header .header-content .raw_shape {
+  width: 100%;
+  height: 48px;
+  margin-top: 180px;
+  position: relative;
+}
+body #wrapper .header .header-content .raw_shape span {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  top: 50%;
+  left: 24px;
+  margin-top: -3px;
+  margin-left: -3px;
+  border-radius: 50%;
+  background-color: #FFFF00;
+}
+body #wrapper .header .header-content .raw_shape::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 48px;
+  height: 48px;
+  border: 2px dotted #FFFF00;
+  border-radius: 50%;
+  animation: spinInfinite 3s infinite linear forwards;
+  transform: rotate(360);
+  opacity: 0.7;
+}
+body #wrapper .header .header-content .raw_shape::before {
+  content: "";
+  position: absolute;
+  left: 56px;
+  top: 50%;
+  border-bottom: 1px dotted #FFFF00;
+  width: 60%;
+  margin-top: 1px;
+  opacity: 0.3;
+}
+@keyframes spinInfinite {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+body #wrapper .header .header-image {
+  width: 100%;
+  padding: 15% 0;
+  transition: ease 0.3s;
+}
+body #wrapper .header .header-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+body #wrapper .header .header-image:hover {
+  transform: scale(0.9) skew(-0.01turn, 5deg);
+  user-select: none;
+  cursor: none;
 }
 body #wrapper .about {
   min-height: 100vh;
@@ -167,143 +219,107 @@ body #wrapper .about .container {
   position: relative;
 }
 body #wrapper .about .container .about_heading {
-  font-size: 320px;
+  font-size: 280px;
   font-family: "Josefin Sans", sans-serif;
   font-weight: bold;
-  line-height: 240px;
-  color: rgba(62, 3, 255, 0.1);
-  left: 0;
+  line-height: 180px;
+  color: rgba(0, 0, 0, 0.1);
   position: absolute;
+  margin-top: 0px;
   top: 0;
-  margin-top: 10px;
+  left: 0;
 }
 body #wrapper .about .about_me_typo {
-  font-family: inherit;
-  font-size: 42px;
-  color: rgb(255, 255, 255);
-  line-height: 64px;
+  font-size: 48px;
   font-weight: lighter;
+  color: rgb(255, 255, 255);
+  font-family: serif;
   text-align: center;
-  max-width: 1260px;
-  margin: 120px auto;
-}
-body #wrapper .about .about_me_typo span u {
-  color: #FFFF00;
-}
-body #wrapper .projects {
-  min-height: 100vh;
-  overflow: visible;
-}
-body #wrapper .projects .project_title {
-  color: #AB00FF;
-  font-family: "Josefin Sans", sans-serif;
-  font-size: 100px;
-  font-weight: bold;
-  transform: rotate(270deg);
-  line-height: inherit;
-  margin-left: 50%;
-}
-body #wrapper .projects .projects_collage {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  line-height: 64px;
   max-width: 1280px;
-  padding: 120px 0;
   margin: 0 auto;
-  position: relative;
+  padding-top: 140px;
 }
-body #wrapper .projects .projects_collage::after {
-  position: absolute;
-  content: "";
-  left: 50%;
-  width: 1px;
-  background-color: rgba(255, 255, 255, 0.25);
-  height: 120%;
-  bottom: 12px;
-  z-index: 9;
+body #wrapper .about .about_me_typo .skills {
+  display: block;
+  text-align: left;
+  color: #FFFF00;
+  text-decoration: underline;
 }
-body #wrapper .projects .projects_collage .item {
+body #wrapper .projects .project_block {
+  width: 98%;
+  height: 640px;
+  margin: 6px auto;
   box-sizing: border-box;
   overflow: hidden;
+  position: relative;
 }
-body #wrapper .projects .projects_collage .item img {
+body #wrapper .projects .project_block .area_title {
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+body #wrapper .projects .project_block .area_title h1 {
+  margin: 0;
+  font-size: 120px;
+  font-weight: bold;
+  font-family: "Josefin Sans", sans-serif;
+  color: rgb(255, 255, 255);
+}
+body #wrapper .projects .project_block .project_cover {
   display: block;
   object-fit: cover;
   object-position: center;
+  width: 100%;
+  height: 100%;
+  transition: ease 0.5s;
 }
-body #wrapper .projects .projects_collage .item a {
-  max-width: 100%;
-  display: block;
-  position: relative;
-}
-body #wrapper .projects .projects_collage .item a .cover {
+body #wrapper .projects .project_block .text_overlay {
   position: absolute;
   left: 0;
-  top: 0;
-  right: 0;
   bottom: 0;
-  box-sizing: border-box;
-  padding: 5%;
-  backdrop-filter: blur(100px);
-  margin-top: 25%;
-  opacity: 0;
-  transition: ease 0.25s;
-}
-body #wrapper .projects .projects_collage .item a .cover h2 {
-  position: absolute;
-  bottom: 32px;
-  font-size: 48px;
-  color: #FFFF00;
-  font-weight: lighter;
-  display: none;
-}
-body #wrapper .projects .projects_collage .item a:hover .cover {
-  margin-top: 0;
-  opacity: 1;
-}
-body #wrapper .projects .projects_collage .item a:hover .cover h2 {
-  display: block;
-}
-body #wrapper .projects .projects_collage .external_button {
-  position: absolute;
-  display: block;
-  color: #AB00FF;
-  font-family: "Josefin Sans", sans-serif;
-  border: 1px solid rgb(255, 255, 255);
-  background-color: rgb(255, 255, 255);
+  width: 100%;
+  height: auto;
   z-index: 9;
-  font-size: 16px;
-  text-align: center;
-  bottom: 6px;
-  padding: 12px;
-  border-radius: 4px;
+  box-sizing: border-box;
+  padding: 24px;
+  transform: translateY(100%);
+  transition: ease 0.7s;
+}
+body #wrapper .projects .project_block .text_overlay .project_title {
+  font-size: 28px;
+  font-weight: lighter;
+  color: #006672;
+  margin: 12px 0;
+}
+body #wrapper .projects .project_block .text_overlay .project_link {
+  color: #BF1374;
+  font-size: 42px;
+  font-weight: lighter;
   text-decoration: none;
+  display: block;
+  margin: 24px 0;
+  position: relative;
 }
-body #wrapper .projects .projects_collage .external_button::after {
+body #wrapper .projects .project_block .text_overlay .project_link span {
   position: absolute;
-  content: "";
-  left: 0px;
-  right: 0px;
-  top: 0px;
-  bottom: 0px;
-  border: 1px solid rgb(255, 255, 255);
-  border-radius: 4px;
+  width: 24px;
+  height: 1px;
+  background-color: #BF1374;
+  top: 50%;
+  right: 0;
   transition: ease 0.3s;
-  opacity: 0;
 }
-body #wrapper .projects .projects_collage .external_button:hover::after {
-  left: -4px;
-  right: -4px;
-  top: -4px;
-  bottom: -4px;
-  opacity: 0.5;
+body #wrapper .projects .project_block .text_overlay .project_link:hover span {
+  width: 48px;
 }
-body #wrapper .projects .projects_collage .abstractions {
-  position: absolute;
-  left: 100%;
-  bottom: 30%;
-  margin-left: -14px;
-  z-index: -1;
+body #wrapper .projects .project_block:hover .project_cover {
+  transform: scale(1.05);
+  filter: blur(75px);
+}
+body #wrapper .projects .project_block:hover .text_overlay {
+  transform: translateY(0);
 }
 body #wrapper .work_experiences {
   position: relative;
@@ -311,8 +327,8 @@ body #wrapper .work_experiences {
 }
 body #wrapper .work_experiences .project_title {
   font-size: 120px;
-  font-family: "Josefin Sans", sans-serif;
-  color: #AB00FF;
+  font-family: serif;
+  color: #006672;
 }
 body #wrapper .work_experiences .experience_card {
   background-color: rgba(0, 102, 114, 0.15);
@@ -332,7 +348,7 @@ body #wrapper .work_experiences .experience_card .item:nth-last-child(1) {
   border-bottom: none;
 }
 body #wrapper .work_experiences .experience_card .item p {
-  font-family: "Josefin Sans", sans-serif;
+  font-family: serif;
   font-size: 28px;
   font-weight: lighter;
   margin: 6px 0;
@@ -369,7 +385,7 @@ body #wrapper .main_footer .content h1 {
 body #wrapper .main_footer .content p {
   font-size: 18px;
   color: #fff;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: serif;
   font-weight: lighter;
 }
 body #wrapper .main_footer .social-content {
@@ -419,7 +435,7 @@ body #wrapper .main_footer .social-content .nav a {
   transition: ease 0.3s;
   padding-top: 35%;
   font-size: 22px;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: serif;
   text-decoration: none;
   color: #fff;
   font-weight: lighter;
