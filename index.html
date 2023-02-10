@@ -38,6 +38,13 @@
         })(window,document,'script','dataLayer','GTM-K7CHTF3');
     </script>
     <!-- End Google Tag Manager -->
+    <script src="./dist/smooth-scrollbar.js"></script>
+
+<script>
+  var Scrollbar = window.Scrollbar;
+
+  Scrollbar.init(document.querySelector('body'));
+</script>
 
 <body class="scroll-content">
     <main id="wrapper">
@@ -46,20 +53,24 @@
 				<nav class="main_nav">
 					<div class="row_100">
 						<div class="col-20">
-							<div class="logo">
-								 
-							</div>
+							<a href="#" class="logo">
+                                <img src="./images/I’m ARIF.svg" alt="I'm Arif">
+                            </a>
 						</div>
 						<div class="col-60">
 							<ul class="nav_items">
 								<li> <a href="#myHeader">Home</a> </li>
-								<li> <a href="#aboutMe">About Us</a> </li>
-								<li> <a href="#myPortfolio">Portfolio</a> </li>
-                                <li> <a href="#myExpereinces">Experinces</a> </li>
-								<li> <a href="#myJobs">Insights</a> </li>
+								<li> <a href="#aboutMe">About Me</a> </li>
+								<li> <a href="#myPortfolio">Case Studies</a> </li>
+                                <li> <a href="#myDesignProcess">Design Process</a> </li>
+								<li> <a href="#myExperiences">Experiences</a> </li>
 							</ul>
 						</div>
-						<div class="col-20"></div>
+						<div class="col-20">
+                            <div class="hire_me_btn">
+                                <a href="mailto:someone@example.com">Want to Contact?</a>
+                            </div>
+                        </div>
 					</div>
 				</nav>
             </div>
@@ -126,7 +137,7 @@
 
 
         <!-- Projects listing -->
-        <section class="projects">
+        <section class="projects" id="myPortfolio">
             <div class="container">
 				<div class="row_100">
 					<div class="col-33">
@@ -141,6 +152,9 @@
 							<img class="project_cover" src="./images/case_study/1.webp" alt="1">
 							<div class="text_overlay">
 								<h6 class="project_title">Students Ph.D. Research Appointment System for Pennsylvania University</h6>
+                                <p class="use_case">
+                                    -Android Platform -Figma -Photoshop -UI Kit
+                                </p>
 								<a class="project_link" href="#">View Case Study <span></span> </a>
 							</div>
 						</div>
@@ -196,7 +210,7 @@
 
 
         <!-- Design & Work Process -->
-        <section class="design_process">
+        <section class="design_process" id="myDesignProcess">
             <div class="container">
                 <div class="glass_backg">
                     <div class="heading_row"> 
@@ -235,7 +249,7 @@
 
 
         <!-- Experiences -->
-        <section class="work_experiences">
+        <section class="work_experiences" id="myExperiences">
             <div class="container">
                 <div class="row_100">
                     <div class="col-100">
@@ -328,7 +342,7 @@
         </footer>
 
         <div class="copyright_text">
-            <p class="text_label"> made with love by Adobe XD, design & developed by <a href="">ariful islam</a>  </p>
+            <p class="text_label"> made with love by Adobe XD, design & developed by <a href="https://github.com/ais95/ais95.github.io">ariful islam</a>  </p>
         </div>
     </main>
 
@@ -340,12 +354,6 @@
             </g>
         </svg>            
     </div>
-
-    <!-- Scrollbar JS -->
-    <script src="./dist/smooth-scrollbar.js"></script>
-    <script>
-        var Scrollbar = window.Scrollbar;
-    </script>
 
 </body>
 </html>

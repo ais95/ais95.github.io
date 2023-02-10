@@ -145,6 +145,17 @@ body{
                     }                
                 }
             }
+            .hire_me_btn{
+                display: flex;
+                width: 100%;
+                align-items: center;
+                height: 100%;
+                justify-content: end;
+                a{
+                    display: block;
+                    color: $secondary-color;
+                }
+            }
         }
 
 
@@ -306,7 +317,7 @@ body{
                 .project_cover{
                     display: block;
                     object-fit: cover;
-                    object-position: center;
+                    object-position: left bottom;                    
                     width: 100%;
                     height: 100%;
                     transition: ease 0.5s;
@@ -326,8 +337,14 @@ body{
                     .project_title{
                         font-size: 28px;
                         font-weight: lighter;
-                        color: $highlight-color;
+                        color: $primary-text;
                         margin: 12px 0;
+                    }
+                    .use_case{
+                        font-size: 16px;
+                        color: $primary-text;
+                        font-family: $font-secondary;
+                        font-weight: lighter;
                     }
                     .project_link{
                         color: $secondary-color;
@@ -356,8 +373,8 @@ body{
 
                 &:hover{
                     .project_cover{
-                        transform: scale(1.1);
                         filter: blur(70px) opacity(0.5);
+                        object-position: center;
                     }
 
                     .text_overlay{
@@ -602,10 +619,10 @@ body{
                         
                         a:hover{
                             svg>path{
-                                fill: $primary-color;
+                                fill: $highlight-color;
                             }
                             span{
-                                color: $primary-color;
+                                color: $highlight-color;
                             }
                         }
                     }    
@@ -633,11 +650,11 @@ body{
                         }
                         .imp_text{
                             position: absolute;
-                            font-size: 32px;
+                            font-size: 28px;
                             font-family: $font-primary;
                             top: 12px;
                             right: 12px;
-                            color: $primary-color!important;
+                            color: $highlight-color;
                             opacity: 0;
                         }
                         &:hover{
@@ -686,4 +703,10 @@ body{
             margin-top: 10%;
         }
     }
+}
+
+
+// Media Optimization
+@media only screen and (max-width: 1140px) {
+    
 }
