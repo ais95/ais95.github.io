@@ -706,6 +706,26 @@ body{
 }
 
 
+
+
+// sidepanle_data
+.sidepanle_data{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    max-width: 1280px;
+    height: auto;
+    min-height: 100vh;
+    overflow-y: auto;
+    background-color: rgba($primary-text, .75);
+    box-sizing: border-box;
+    z-index: 9;
+    padding: 24px;
+    backdrop-filter: blur(50px);
+}
+
+
 // Media Optimization
 @media only screen and (max-width: 1140px) {
     
