@@ -24,13 +24,34 @@ $highlight-color: #BF1374;
     padding: 0;
     margin: 0;
 }
+
+// @mixins 
+@mixin text-gradient{
+    background-image: linear-gradient(to right top, #fff300, #dff200, #bdf000, #96ee00, #67eb12);
+    background-clip: text;
+    -webkit-background-clip: text; 
+    text-fill-color: transparent; 
+    -webkit-text-fill-color: transparent;
+}
+
+// Extends
+                
+// column styles
+    %column_style{
+        padding: 0;
+        box-sizing: border-box;
+        overflow: hidden;                    
+        width: 100%;
+    }
+
+
 body{
     font-family: $font-primary;    
     #wrapper{        
         min-height: 100vh;
         position: relative;
         backdrop-filter: blur(35px);
-        background-color: rgba($primary-color, 0.90);
+        background-image: radial-gradient(circle, #001803, #001912, #001821, #00122d, #01032e);
         z-index: 1;
         .container{
             width: 100%;
@@ -91,13 +112,6 @@ body{
                     max-width: 100%;
                     @extend %column_style;
                 }
-                // column styles
-                %column_style{
-                    padding: 0;
-                    box-sizing: border-box;
-                    overflow: hidden;                    
-                    width: 100%;
-                }
             }
         }
 
@@ -116,7 +130,7 @@ body{
         .main_nav{
             width: 100%;
             padding: 12px 0;
-            border-bottom: 1px dotted rgba($secondary-color, .30);
+            border-bottom: 1px solid rgba($secondary-color, 0.15);
             .logo{
                 overflow: hidden;
             }
@@ -135,12 +149,23 @@ body{
                         color: $primary-text;
                         position: relative;
                         text-decoration: none;
-                        padding: 6px;
-                        font-size: 22px;
-                        font-weight: lighter;
-                        font-family: $font-primary;
+                        padding: 4px 8px;
+                        font-size: 20px;
+                        font-weight: 400;
+                        font-family: $font-secondary;
+                        transition: ease 0.3s;
                         &:hover{
                             color: $secondary-color;
+                            &::after{
+                                content: "";
+                                position: absolute;
+                                top: -4px;
+                                right: -4px;
+                                width: 8px;
+                                height: 8px;
+                                border-radius: 50%;
+                                background-color: $secondary-color;
+                            }
                         }
                     }                
                 }
@@ -153,7 +178,34 @@ body{
                 justify-content: end;
                 a{
                     display: block;
-                    color: $secondary-color;
+                    color: white;
+                    font-size: 18px;
+                    font-family: $font-secondary;
+                    text-decoration: none;
+                    font-weight: 400;
+                    background-color: $highlight-color;
+                    padding: 12px 24px;
+                    position: relative;
+                    margin-right: 12px;
+                    &::after{
+                        position: absolute;
+                        content: "";
+                        width: 100%;
+                        height: 100%;
+                        left: 0;
+                        top: 0;
+                        margin-left: 4px;
+                        margin-top: 4px;
+                        background-color: $secondary-color;
+                        z-index: -1;
+                        transition: ease 0.3s;
+                    }
+                    &:hover{
+                        &::after{
+                            margin-left: 8px;
+                            margin-top: 8px;
+                        }
+                    }
                 }
             }
         }
@@ -198,7 +250,7 @@ body{
                         width: 12px;
                         height: 12px;
                         top: 50%;
-                        left: 24px;
+                        left: 25px;
                         margin-top: -3px;
                         margin-left: -3px;
                         border-radius: 50%;
@@ -210,18 +262,18 @@ body{
                         left: 0;
                         width: 48px;
                         height: 48px;
-                        border: 2px dotted $secondary-color;
+                        border: 4px dotted white;
                         border-radius: 50%;
                         animation: spinInfinite 3s infinite linear forwards;
                         transform: rotate(360);
-                        opacity: 0.7;
+                        // opacity: 0.5;
                     }
                     &::before{
                         content: "";
                         position: absolute;
-                        left: 56px;
+                        left: 64px;
                         top: 50%;
-                        border-bottom: 1px dotted $secondary-color;
+                        border-bottom: 2px dotted white;
                         width: 60%;
                         margin-top: 1px;
                         opacity: 0.3;
@@ -257,36 +309,37 @@ body{
 
         // About me
         .about{
-            padding: 120px 0;
+            padding: 60px 0;
             .container{
                 position: relative;
                 .about_heading{
-                    font-size: 280px;
+                    font-size: 240px;
                     font-family: $font-secondary;
-                    font-weight: bold;
+                    font-weight: lighter;
                     line-height: 180px;
-                    color: rgba(0,0,0, .10);
+                    color: rgba($secondary-color, .15);
                     position: absolute;
-                    margin-top: 0px;
-                    top: 0;
+                    top: -20px;
                     left: 0;
+                    z-index: -9;
                 }
             }
             .about_me_typo{
-                font-size: 48px;
+                font-size: 54px;
                 font-weight: lighter;
                 color: $primary-text;
                 font-family: $font-primary;                            
                 text-align: center;
                 line-height: 64px;
-                max-width: 1280px;
                 margin: 0 auto;
-                padding-top: 140px;
+                padding-top: 60px;
+                max-width: 1290px;
                 .skills{
                     display: block;
                     text-align: left;
                     color: $secondary-color;
                     text-decoration: underline;
+                    @include text-gradient;
                 }
             }
         }
@@ -301,6 +354,7 @@ body{
                 box-sizing: border-box;
                 overflow: hidden;
                 position: relative;
+                border-radius: 16px;
                 .area_title{
                     height: 100%;
                     overflow: hidden;
@@ -411,10 +465,6 @@ body{
                 align-items: center;
             .container{                
                 .glass_backg{
-                    background-color: rgba(0,0,0, .07);
-                    border-radius: 16px;
-                    padding: 48px;
-                    box-sizing: border-box;
                     .heading_row{
                         display: block;
                         width: 100%;
