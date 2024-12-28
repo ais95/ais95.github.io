@@ -543,10 +543,9 @@ body{
                 margin: 120px auto;
                 .item{
                     margin: 0 auto;
-                    padding-top: 24px;
                     transition: ease 0.3s;     
-                    background-color: rgba($secondary-color, .05);     
-                    padding: 24px;   
+                    background-color: rgba($secondary-color, .1);     
+                    padding: 24px 42px;   
                     margin: 16px 0;
                     border-radius: 16px;
                     .duration{
@@ -559,6 +558,7 @@ body{
                     .title{
                         margin: 12px 0;
                         font-size: 42px;
+                        line-height: 64px;
                         font-family: $font-primary;
                         font-weight: lighter;
                         color: $secondary-color;
@@ -567,10 +567,10 @@ body{
                         margin: 0;
                         color: $primary-text;
                         font-family: $font-secondary;
-                        font-size: 28px;
+                        font-size: 24px;
+                        line-height: 36px;
                         font-weight: lighter;
                         margin: 12px 0;
-                        padding-bottom: 24px;
                     }
                     &:hover{
                         transform: translate(3px, -3px);
@@ -670,8 +670,8 @@ body{
                             transform: scale(1);
                             background-color: rgba($primary-text, 0.05);
                             .imp_text{
-                                color: $primary-text;
-                                opacity: 0.5;
+                                color: $highlight-color;
+                                opacity: 1;
                             }
                         }
                     }                                    
