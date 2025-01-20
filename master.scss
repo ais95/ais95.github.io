@@ -52,8 +52,7 @@ body{
         min-height: 100vh;
         position: relative;
         backdrop-filter: blur(35px);
-        background: rgb(0,18,2);
-        background: linear-gradient(167deg, rgba(0,18,2,1) 0%, rgba(2,32,60,1) 47%, rgba(20,1,34,1) 100%);
+        background-image: linear-gradient(to top, #012020 0%, #330867 100%);
         z-index: 1;
         .container{
             width: 100%;
@@ -362,7 +361,6 @@ body{
                 box-sizing: border-box;
                 overflow: hidden;
                 position: relative;
-                border-radius: 16px;
                 .area_title{
                     height: 100%;
                     overflow: hidden;
@@ -397,7 +395,7 @@ body{
                     transform: translateY(100%);
                     transition: ease 0.7s;
                     .project_title{
-                        font-size: 28px;
+                        font-size: 32px;
                         font-weight: lighter;
                         color: $primary-text;
                         margin: 12px 0;
@@ -410,24 +408,24 @@ body{
                     }
                     .project_link{
                         color: $secondary-color;
-                        font-size: 42px;
-                        font-weight: lighter;
+                        font-size: 36px;
+                        font-weight: 400;
                         text-decoration: none;
                         display: block;
                         margin: 24px 0;
                         position: relative;
                         span{
                             position: absolute;
-                            width: 24px;
+                            width: 64px;
                             height: 1px;
                             background-color: $secondary-color;
-                            top: 50%;
-                            right: 0;
+                            top: 55%;
+                            right: 5%;
                             transition: ease 0.3s;
                         }
                         &:hover{                            
                             span{
-                                width: 48px;
+                                width: 120px;
                             }
                         }
                     }
@@ -544,24 +542,23 @@ body{
                 .item{
                     margin: 0 auto;
                     transition: ease 0.3s;     
-                    background-color: rgba($secondary-color, .1);     
+                    background-color: rgba($primary-color, 0.25);     
                     padding: 24px 42px;   
-                    margin: 16px 0;
-                    border-radius: 16px;
-                    .duration{
-                        font-family: $font-secondary;
-                        font-size: 28px;
-                        font-weight: lighter;
-                        color: $primary-text;
-                        margin: 12px 0;
-                    }
+                    margin: 24px 0;
                     .title{
                         margin: 12px 0;
                         font-size: 42px;
-                        line-height: 64px;
+                        line-height: 48px;
                         font-family: $font-primary;
                         font-weight: lighter;
                         color: $secondary-color;
+                    }
+                    .duration{
+                        font-family: $font-secondary;
+                        font-size: 24px;
+                        font-weight: lighter;
+                        color: $primary-text;
+                        margin: 12px 0;
                     }
                     .label{
                         margin: 0;
@@ -668,9 +665,9 @@ body{
                         }
                         &:hover{
                             transform: scale(1);
-                            background-color: rgba($primary-text, 0.05);
+                            background-color: rgba($primary-text, 0.15);
                             .imp_text{
-                                color: $highlight-color;
+                                color: $secondary-color;
                                 opacity: 1;
                             }
                         }
